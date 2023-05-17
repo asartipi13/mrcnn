@@ -60,14 +60,14 @@ class CustomConfig(Config):
     # Train on 1 GPU and 8 images per GPU. We can put multiple images on each
     # GPU because the images are small. Batch size is 8 (GPUs * images/GPU).
     GPU_COUNT = 1
-    IMAGES_PER_GPU = 4
+    IMAGES_PER_GPU = 16
 
     # Number of classes
     NUM_CLASSES = 1
 
     # Use small images for faster training. Set the limits of the small side
     # the large side, and that determines the image shape.
-    IMAGE_MIN_DIM = 512
+    IMAGE_MIN_DIM = 256
     IMAGE_MAX_DIM = 512
 
     # Use smaller anchors because our image and objects are small
@@ -78,15 +78,16 @@ class CustomConfig(Config):
     # TRAIN_ROIS_PER_IMAGE = 32
 
     # Use a small epoch since the data is simple
-    STEPS_PER_EPOCH = 500
+    STEPS_PER_EPOCH = 1000
 
     # use small validation steps since the epoch is small
-    VALIDATION_STEPS = 5
+    VALIDATION_STEPS = 50
 
     ETF_C = 2
 
     DETECTION_MIN_CONFIDENCE = 0.9
 
+    BACKBONE = "resnet101"
 
 
 """
