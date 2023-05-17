@@ -7,7 +7,7 @@ Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
 """
 
-from mrcnn_demo.config import Config
+from mrcnn_colab.config import Config
 import os
 import random
 import datetime
@@ -27,7 +27,7 @@ import tensorflow.keras.layers as KL
 KE = KL
 import tensorflow.keras.models as KM
 
-from mrcnn_demo import utils
+from mrcnn_colab import utils
 
 # Requires TensorFlow 1.3+ and Keras 2.0.8+.
 from distutils.version import LooseVersion
@@ -2075,7 +2075,7 @@ class MaskRCNN():
 
         # Add multi-GPU support.
         if config.GPU_COUNT > 1:
-            from mrcnn_demo.parallel_model import ParallelModel
+            from mrcnn_colab.parallel_model import ParallelModel
             model = ParallelModel(model, config.GPU_COUNT)
 
         return model

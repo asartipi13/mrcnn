@@ -14,15 +14,15 @@ import shutil
 import zipfile
 
 # Root directory of the project
-ROOT_DIR = os.path.abspath("/content/mrcnn")
+ROOT_DIR = os.path.abspath("/content/mrcnn/mrcnn_colab")
 print("VERS 0.5 - updated 11/03/2023")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
-from mrcnn_demo.config import Config
-from mrcnn_demo import utils
-import mrcnn_demo.model as modellib
-from mrcnn_demo import visualize
-from mrcnn_demo.model import log
+from mrcnn_colab.config import Config
+from mrcnn_colab import utils
+import mrcnn_colab.model as modellib
+from mrcnn_colab import visualize
+from mrcnn_colab.model import log
 from PIL import Image, ImageDraw
 
 import warnings
