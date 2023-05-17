@@ -14,7 +14,7 @@ import shutil
 import zipfile
 
 # Root directory of the project
-ROOT_DIR = os.path.abspath("/content/maskrcnn")
+ROOT_DIR = os.path.abspath("/content/mrcnn")
 print("VERS 0.5 - updated 11/03/2023")
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
